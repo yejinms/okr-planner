@@ -376,7 +376,7 @@ function App() {
   if (!currentOKR) return null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-rose-50 to-pink-50 p-6 font-['Dongle']">
+    <div className="min-h-screen bg-gradient-to-b from-rose-50 to-pink-50 p-6 font-['Diphylleia']">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <div className="flex justify-between items-center mb-6">
