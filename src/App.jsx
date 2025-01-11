@@ -379,6 +379,7 @@ function App() {
     <div className="min-h-screen bg-gradient-to-b from-rose-50 to-pink-50 p-6 font-['Gowun Dodum']">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
+          {/* Original header section */}
           <div className="flex justify-between items-center mb-6">
             <h1 className="text-3xl font-bold bg-gradient-to-r from-rose-500 to-pink-500 text-transparent bg-clip-text">
               OKR 플래너
@@ -422,7 +423,7 @@ function App() {
             </div>
           </div>
 
-          <div className="flex gap-2 overflow-x-auto pb-2">
+          <div className="flex gap-2 overflow-x-auto pb-2 mb-6">
             {okrList.map((okr) => (
               <div key={okr.id} className="flex items-center gap-1">
                 <Button
@@ -446,13 +447,25 @@ function App() {
               </div>
             ))}
           </div>
+          {/* New Dream Display Section */}
+          {currentOKR.vision.dream && (
+            <div className="rounded-lg shadow-md border-4 border-rose-200 transform hover:scale-[1.02] transition-transform">
+              {/* <h2 className="text-2xl font-bold text-center text-pink-600 mb-2">
+                꿈꾸는 모습
+              </h2> */}
+              <p className="text-xl text-center font-bold text-pink-600 px-4 py-2 bg-white rounded-lg">
+                {currentOKR.vision.dream ||
+                  "아직 꿈꾸는 모습이 작성되지 않았습니다"}
+              </p>
+            </div>
+          )}
         </div>
 
         {/* 비전 섹션 */}
         <Section id="vision" title="비전 (Vision)" icon={Star}>
           <div className="space-y-4">
             <div>
-              <label className="font-medium text-gray-700">꿈꾸는 모습</label>
+              {/* <label className="font-medium text-gray-700">꿈꾸는 모습</label> */}
               <textarea
                 value={currentOKR.vision.dream}
                 onChange={(e) =>
