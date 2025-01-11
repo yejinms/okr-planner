@@ -391,7 +391,8 @@ function App() {
                 onClick={handleAddNewOKR}
                 className="bg-rose-500 hover:bg-rose-600 text-white"
               >
-                <Plus className="w-4 h-4 mr-2" />새 OKR
+                <Plus className="w-4 h-4 mr-2" />
+                목표 추가
               </Button>
               <Button
                 onClick={() => storageUtils.exportOKR(currentOKR)}
