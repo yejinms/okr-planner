@@ -10,18 +10,18 @@ jobs:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     permissions:
-      contents: write      # 이 부분이 중요합니다
+      contents: write
     steps:
       - uses: actions/checkout@v3
 
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
-          
+          node-version: "18" # 16에서 18로 변경
+
       - name: Install dependencies
         run: npm install --legacy-peer-deps
-        
+
       - name: Build website
         run: npm run build
 
